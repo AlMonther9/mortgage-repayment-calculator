@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mortgage repayment calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="header">
+          <h2>Mortgage Calculator</h2>
+          <button id="clear-btn">Clear All</button>
+        </div>
+
+        <form id="mortgage-form">
+          <div class="form-item">
+            <label class="light-text" for="mortgage-amount"
+              >Mortgage Amount</label
+            >
+            <div class="form-flex" id="mortgage-amount-main">
+              <div class="amount">
+                <input type="text" name="" id="amount" value="£" disabled />
+              </div>
+              <input
+                id="mortgage-amount"
+                type="text"
+                name="mortgage-amount"
+                required
+              />
+            </div>
+
+            <p class="form-alert" id="amount-alert">This filed is required</p>
+          </div>
+
+          <div class="form-items">
+            <div class="form-col">
+              <div class="form-item">
+                <label class="light-text" for="mortgage-term"
+                  >Mortgage Term</label
+                >
+                <div class="form-flex" id="mortgage-term-main">
+                  <input
+                    id="mortgage-term"
+                    type="text"
+                    name="mortgage-term"
+                    required
+                  />
+                  <div class="years">
+                    <input
+                      type="text"
+                      name=""
+                      id="years"
+                      value="years"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <p class="form-alert" id="term-alert">This filed is required</p>
+              </div>
+              <div class="form-item">
+                <label class="light-text" for="interest-rate"
+                  >Interest Rate</label
+                >
+                <div class="form-flex" id="interest-rate-main">
+                  <input
+                    id="interest-rate"
+                    type="text"
+                    name="interest-rate"
+                    step="0.01"
+                    required
+                  />
+                  <div class="persentage">
+                    <input
+                      type="text"
+                      name=""
+                      id="persentage"
+                      value="%"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <p class="form-alert" id="rate-alert">This filed is required</p>
+              </div>
+            </div>
+          </div>
+          <div class="form-item">
+            <label class="light-text">Mortgage Type</label>
+            <div class="radio-inputs">
+              <input
+                type="radio"
+                name="mortgage-type"
+                class="mortgage-type"
+                id="repayment"
+                value="repayment"
+                required
+              />
+              <label for="repayment">Repayment</label>
+            </div>
+            <div class="radio-inputs">
+              <input
+                type="radio"
+                name="mortgage-type"
+                class="mortgage-type"
+                id="interest-only"
+                value="interest-only"
+                required
+              />
+              <label for="interest-only">Interest Only</label>
+            </div>
+
+            <p class="form-alert" id="type-alert">This field is required</p>
+          </div>
+          <div class="form-item">
+            <button id="calculate-btn" class="calcualte-btn" type="button">
+              Calculate Repayments
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="right">
+        <div id="default-text" class="default-text">
+          <img src="./assets/images/illustration-empty.svg" alt="" />
+
+          <h2>Results shown here</h2>
+          <p class="light-text">
+            Complete the form and click “calculate repayments” to see what your
+            monthly repayments would be.
+          </p>
+        </div>
+        <div id="calculations-container" class="calculations-container" hidden>
+          <h2>Your results</h2>
+
+          <p class="light-text">
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate
+            repayments” again.
+          </p>
+          <div class="resContiner">
+            <div class="monthly">
+              <p class="light-text">Your monthly repayments</p>
+              <span id="result" class="monthly-result"></span>
+              <div class="total-term">
+                <p class="light-text2">Total you'll repay over the term</p>
+                <span id="term-result" class="term-result"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,378 @@
+/* Importing Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Defining root variables for colors */
+:root {
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+  --White: hsl(0, 0%, 100%);
+  --Slate100: hsl(202, 86%, 94%);
+  --Slate300: hsl(203, 41%, 72%);
+  --Slate500: hsl(200, 26%, 54%);
+  --Slate700: hsl(200, 24%, 40%);
+  --Slate900: hsl(202, 55%, 16%);
+}
+
+/* Body styles */
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  background-color: var(--Slate100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  width: 60%;
+  background-color: var(--White);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+input[type='radio'] {
+  appearance: none;
+  width: .5rem;
+  height: .5rem;
+  margin-right: .5rem;
+  outline: 2px solid var(--Lime);
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
+input[type='radio']:checked {
+  background-color: var(--Lime);
+}
+
+/* input[type='text'] {
+  width: 100%;
+  padding:
+} */
+/* Left and Right section styles */
+.left,
+.right {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.right {
+  border-radius: 0px 15px 15px 65px;
+  background-color: var(--Slate900);
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Left section header styles */
+.left .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.left h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--Slate900);
+}
+
+.left .header button {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--Slate500);
+  color: var(--Slate500);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.left .header button:hover {
+  color: var(--Lime);
+  border-bottom: 1px solid var(--Lime);
+}
+
+/* Form styles */
+#mortgage-form .form-item {
+  margin-bottom: 1.5rem;
+}
+
+#mortgage-form .light-text {
+  color: var(--Slate700);
+  margin-bottom: 0.5rem;
+}
+
+.form-col {
+  display: flex;
+  gap: 1rem;
+}
+
+#mortgage-form .form-flex {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#mortgage-form input[type="text"] {
+  font-size: 1rem;
+  color: var(--Slate900);
+  outline: none;
+}
+.form-flex {
+  border: 1px solid var(--Slate100);
+  border-radius: 5px;
+  margin-top: 0.4rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#amount,
+.amount,
+.persentage,
+#persentage,
+.years,
+#years {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--Slate100);
+  border: none;
+  padding-bottom: 0.3rem;
+}
+.amount {
+  width: 10%;
+  border-radius: 5px 0px 0px 5px;
+  -webkit-border-radius: 5px 0px 0px 5px;
+  -moz-border-radius: 5px 0px 0px 5px;
+  -ms-border-radius: 5px 0px 0px 5px;
+  -o-border-radius: 5px 0px 0px 5px;
+}
+.persentage {
+  width: 30%;
+  border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -ms-border-radius: 0px 5px 5px 0px;
+  -o-border-radius: 0px 5px 5px 0px;
+}
+.years {
+  width: 60%;
+  border-radius: 0px 5px 5px 0px;
+}
+
+#mortgage-amount,
+#mortgage-term,
+#interest-rate {
+  border: none;
+  margin-left: 0.3rem;
+}
+#mortgage-amount:focus,
+#mortgage-amount:active {
+  background: none;
+  outline: none;
+}
+.form-flex:focus-within {
+  border: 1px solid var(--Lime);
+}
+#mortgage-form .form-alert {
+  color: var(--Red);
+  font-size: 0.875rem;
+  display: none;
+}
+.form-flex input {
+  margin-top: 0.7rem;
+  width: 100%;
+  background-color: white;
+}
+.form-flex input:checked {
+  background-color: white;
+}
+#mortgage-term-main,
+#interest-rate-main {
+  width: 99%;
+}
+/* Radio input styles */
+.radio-inputs {
+  margin-block: 10px;
+  border: 1px solid var(--Slate100);
+  padding-block: 10px;
+  vertical-align: middle;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.mortgage-type {
+  margin-inline: 0.4rem;
+}
+
+.radio-inputs:focus-within {
+  border-color: var(--Lime);
+}
+.radio-inputs label {
+  color: var(--Slate900);
+  font-weight: 600;
+}
+
+/* Calculate button styles */
+.calcualte-btn {
+  width: 70%;
+  background-color: var(--Lime);
+  color: var(--Slate900);
+  border: none;
+  margin-top: 0.2rem;
+  border-radius: 25px;
+  padding: 10px 20px 10px 40px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.calcualte-btn::before {
+  content: url(./assets/images/icon-calculator.svg);
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -5px;
+}
+
+.calcualte-btn:hover {
+  background-color: hsl(61, 70%, 45%);
+}
+
+/* Right section content styles */
+.right {
+  text-align: center;
+}
+.right img {
+  margin-bottom: 2rem;
+}
+
+.right h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.right p {
+  font-size: 1rem;
+  color: var(--Slate300);
+}
+
+/* Result container styles */
+.resContiner {
+  padding-top: 4px;
+  margin-top: 2rem;
+  background-color: var(--Lime);
+  margin-bottom: -80px;
+  border-radius: 5px;
+}
+
+.calculations-container {
+  margin-top: -30%;
+}
+
+.monthly {
+  background-color: hsl(201, 70%, 8%);
+  border-radius: 5px;
+  color: var(--White);
+  padding: 20px;
+}
+
+.total-term {
+  border-top: 1px solid rgba(255, 255, 255, 0.541);
+}
+
+.term-result,
+.monthly-result {
+  display: block;
+}
+
+.monthly-result {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--Lime);
+  margin-bottom: 2rem;
+}
+
+.term-result {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.light-text2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.calculations-container .light-text {
+  font-size: 0.9rem;
+}
+
+
+
+@media (max-width: 880px) {
+  .container {
+    margin-top: 50%;
+    /* padding-top: 90%; */
+    width: 90%;
+    margin: auto;
+    flex-direction: column;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+  .left {
+    width: 100%;
+  }
+  .calcualte-btn {
+    width: 15rem;
+  }
+  .form-item {
+    width: 39rem;
+  }
+  .right {
+    width: 100%;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  .left .header {
+    display: block;
+  }
+  .left .header h2 {
+    margin-bottom: 0.4rem;
+  }
+  .calcualte-btn {
+    width: 23rem;
+  }
+  .form-item {
+    width: 23rem;
+  }
+}
